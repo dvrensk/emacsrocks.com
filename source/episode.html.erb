@@ -1,0 +1,21 @@
+<iframe width="560" height="345" src="http://www.youtube.com/embed/<%= @episode.youtube %>?hd=1" frameborder="0" allowfullscreen></iframe>
+
+<div id="download">
+<a href="<%= @episode.dropbox_link %>">Download this episode</a> (<%= @episode.size %>)
+- Dropbox serves uncool headers, so right click and Save&nbsp;as&nbsp;...</li>
+</div>
+
+<div id="more">
+  <div id="next">
+    Want more?
+    <% if @episode.next %>
+      Check out <a href="<%= @episode.next.link %>"><%= @episode.next.title %></a> or browse
+    <% else %>
+      Browse
+    <% end %>
+    <a id="all_episodes" href="/">all episodes</a>.
+  </div>
+  <div id="comments">
+    <%= partial "disqus_thread" %>
+  </div>
+</div>

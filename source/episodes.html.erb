@@ -1,0 +1,16 @@
+<p id="welcome_text">Yes, emacs does rock. And here are some episodes to prove
+  it. Follow me on <a href="http://twitter.com/#!/emacsrocks">@emacsrocks</a>
+  for more.</p>
+
+<div id="episodes">
+  <ul>
+  <% for episode in Episodes.all %>
+    <li>
+      <a href="<%= episode.link %>">
+        @emacsrocks
+        <span>;; <%= episode.title %></span>
+      </a>
+    </li>
+  <% end %>
+  </ul>
+</div>
