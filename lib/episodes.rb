@@ -7,8 +7,9 @@ class Episodes
 
   def self.find_all
     [
-     Episode.new(:number => '01', :youtube => 'O0UgY-DmFbU', :size => "21mb"),
-     Episode.new(:number => '02', :youtube => 'dE2haYu0co8', :size => "30mb")
+     Episode.new(:number => '01', :youtube => 'O0UgY-DmFbU', :size => "21mb", :name => "From var to this"),
+     Episode.new(:number => '02', :youtube => 'dE2haYu0co8', :size => "30mb", :name => "A vimgolf eagle"),
+     Episode.new(:number => '03', :youtube => 'ePIHUfFz8-c', :size => "14mb", :name => "A vimgolf albatross")
     ]
   end
 
@@ -18,10 +19,10 @@ class Episodes
 end
 
 class Episode
-  attr_reader :number, :youtube, :size
+  attr_reader :number, :youtube, :size, :name
 
   def initialize(params)
-    @number, @youtube, @size = params[:number], params[:youtube], params[:size]
+    @number, @youtube, @size, @name = params[:number], params[:youtube], params[:size], params[:name]
   end
 
   def next
