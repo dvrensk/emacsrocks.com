@@ -7,9 +7,10 @@ class Episodes
 
   def self.find_all
     [
-     Episode.new(:number => '01', :youtube => 'O0UgY-DmFbU', :size => "21mb", :name => "From var to this"),
-     Episode.new(:number => '02', :youtube => 'dE2haYu0co8', :size => "30mb", :name => "A vimgolf eagle"),
-     Episode.new(:number => '03', :youtube => 'ePIHUfFz8-c', :size => "14mb", :name => "A vimgolf albatross")
+     Episode.new(:number => "01", :name => "From var to this", :size => "21mb", :youtube => "O0UgY-DmFbU"),
+     Episode.new(:number => "02", :name => "A vimgolf eagle", :size => "30mb", :youtube => "dE2haYu0co8"),
+     Episode.new(:number => "03", :name => "A vimgolf albatross", :size => "14mb", :youtube => "ePIHUfFz8-c"),
+     Episode.new(:number => "04", :name => "A rebind controversy", :size => "14mb", :youtube => "OA0AjzBgWU4")
     ]
   end
 
