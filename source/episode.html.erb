@@ -1,19 +1,32 @@
-<iframe width="560" height="345" src="http://www.youtube.com/embed/<%= @episode.youtube %>?hd=1" frameborder="0" allowfullscreen></iframe>
+<div id="episode">
+  <iframe width="560" height="345" src="http://www.youtube.com/embed/<%= @episode.youtube %>?hd=1" frameborder="0" allowfullscreen></iframe>
 
-<div id="download">
-<a href="<%= @episode.dropbox_link %>">Download this episode</a> (<%= @episode.size %>)
-- Dropbox serves uncool headers, so right click and Save&nbsp;as&nbsp;...</li>
+  <div id="download">
+    <a href="<%= @episode.dropbox_link %>">Download this episode</a> (<%= @episode.size %>)
+    - Dropbox serves uncool headers, so right click and Save&nbsp;as&nbsp;...
+  </div>
+
+  <div id="commands">
+    <% @episode.commands.each do |command| %>
+      <%= partial "commands/#{command}" %>
+    <% end %>
+  </div>
+
+  <div id="github">
+    <a href="https://github.com/magnars/.emacs.d/">My .emacs.d on github</a>.
+  </div>
 </div>
 
 <div id="more">
   <div id="next">
     Want more?
-    <% if @episode.next %>
-      See <a href="<%= @episode.next.link %>"><%= @episode.next.title %></a> or browse
-    <% else %>
-      Browse
-    <% end %>
-    <a id="all_episodes" href="/">all episodes</a>.
+    <ul>
+      <% if @episode.next %>
+        <li><a href="<%= @episode.next.link %>">See <%= @episode.next.title %></a></li>
+      <% end %>
+      <li><a href="/">Browse all episodes</a></li>
+      <li><a href="http://twitter.com/#!/emacsrocks">Follow me on twitter</a></li>
+    </ul>
   </div>
   <div id="comments">
     <%= partial "disqus_thread" %>
