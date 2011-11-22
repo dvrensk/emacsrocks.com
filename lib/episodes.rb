@@ -13,7 +13,8 @@ class Episodes
      Episode.new(:number => "04", :name => "A rebind controversy", :size => "14mb", :youtube => "OA0AjzBgWU4", :commands => ["iy-go-to-char", "downcase-word", "transpose-words"]),
      Episode.new(:number => "05", :name => "Macros in style",      :size => "12mb", :youtube => "o1jJS_aibPA", :commands => ["forward-list", "kmacro-start-macro"]),
      Episode.new(:number => "06", :name => "Yeah! Snippets!",      :size => "8mb",  :youtube => "1W66B3CHaUo", :commands => ["yas-expand"]),
-     Episode.new(:number => "07", :name => "Mind. Exploded.",      :size => "14mb", :youtube => "NXTf8_Arl1w", :commands => ["key-chord-define-global"])
+     Episode.new(:number => "07", :name => "Mind. Exploded.",      :size => "14mb", :youtube => "NXTf8_Arl1w", :commands => ["key-chord-define-global"]),
+     Episode.new(:number => "08", :name => "mark-multiple",        :size => "12mb", :youtube => "r2o9HYi7DOY", :commands => ["mark-next-like-this", "rename-sgml-tag", "inline-string-rectangle"])
     ]
   end
 
