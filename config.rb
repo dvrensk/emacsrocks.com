@@ -68,7 +68,7 @@
 # Change the images directory
 # set :images_dir, "alternative_image_directory"
 
-require "lib/episodes"
+require "./lib/episodes"
 
 Episodes.all.each do |episode|
   page "/e#{episode.number}.html", :proxy => "/episode.html", :ignore => true do

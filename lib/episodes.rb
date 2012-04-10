@@ -15,7 +15,8 @@ class Episodes
      Episode.new(:number => "06", :name => "Yeah! Snippets!",      :size => "8mb",  :youtube => "1W66B3CHaUo", :commands => ["yas-expand"]),
      Episode.new(:number => "07", :name => "Mind. Exploded.",      :size => "14mb", :youtube => "NXTf8_Arl1w", :commands => ["key-chord-define-global"]),
      Episode.new(:number => "08", :name => "mark-multiple",        :size => "12mb", :youtube => "r2o9HYi7DOY", :commands => ["mark-next-like-this", "rename-sgml-tag", "inline-string-rectangle"]),
-     Episode.new(:number => "09", :name => "expand-region",        :size => "16mb", :youtube => "_RvHz3vJ3kA", :commands => ["expand-region"])
+     Episode.new(:number => "09", :name => "expand-region",        :size => "16mb", :youtube => "_RvHz3vJ3kA", :commands => ["expand-region"]),
+     Episode.new(:number => "10", :name => "Jumping around",       :size => "23mb", :youtube => "UZkpmegySnc", :commands => ["ace-jump-mode", "ido-imenu"])
     ]
   end
 
