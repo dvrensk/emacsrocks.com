@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-class Episodes
+module Episodes
   def self.all
-    @@all ||= find_all
+    @all ||= find_all
   end
 
   def self.find_all
@@ -21,7 +21,7 @@ class Episodes
   end
 
   def self.next(episode)
-    all[all.index(episode) + 1]
+    all[all.index(episode).next]
   end
 end
 
