@@ -4,7 +4,7 @@
 
 <div id="episodes">
   <ul>
-  <% for episode in Episodes.all %>
+  <% Episodes.all.each do |episode| %>
     <li>
       <a href="<%= episode.link %>">
         @emacsrocks
