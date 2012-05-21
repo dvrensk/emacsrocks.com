@@ -78,6 +78,12 @@ end
 
 page "/", :proxy => "/episodes.html", :ignore => true
 
+require "./lib/atom"
+
+page "/atom.xml", :proxy => "/atom.xml", :layout => "none" do
+  @feed = Atom.build
+end
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
