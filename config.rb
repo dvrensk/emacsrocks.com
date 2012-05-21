@@ -80,7 +80,7 @@ page "/", :proxy => "/episodes.html", :ignore => true
 
 require "./lib/atom"
 
-page "/atom.xml", :proxy => "/atom.xml", :layout => "none", :ignore => true do
+page "/atom.xml", :proxy => "/atom.xml", :layout => "none" do
   @feed = Atom.build
 end
 
