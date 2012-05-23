@@ -13,7 +13,7 @@ module Atom
       atom.updated Episodes.all[-1].time.iso8601(0)
       atom.title "Emacs Rocks!", :type => "text"
       atom.link :rel => "self", :href => "#{base_uri}/atom.xml"
-      Episodes.all[-10..-1].each do |episode|
+      Episodes.all[-10..-1].reverse.each do |episode|
         atom.entry do
           atom.title "#{episode.number}: #{episode.name}"
           atom.updated episode.time.iso8601(0)
