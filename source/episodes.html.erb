@@ -2,9 +2,9 @@
   it. Follow me on <a href="http://twitter.com/#!/emacsrocks">@emacsrocks</a>
   and/or subscribe to the <a href="/atom.xml">feed</a> for more.</p>
 
-<div id="episodes">
+<div class="episode_list">
   <ul>
-  <% Episodes.all.each do |episode| %>
+  <% Episodes.all_normal.each do |episode| %>
     <li>
       <a href="<%= episode.link %>">
         @emacsrocks
@@ -15,3 +15,30 @@
   <% end %>
   </ul>
 </div>
+
+<div style="clear: both"></div>
+
+<h2 id="special_series_heading">Extending Emacs</h2>
+
+<p>
+  Join me and <a href="http://twitter.com/cjno">@cjno</a> in this special
+  edition Emacs Rocks series where we extend emacs with a minor-mode for the
+  <a href="http://busterjs.org">Buster.JS</a> testing framework.
+</p>
+
+<div class="episode_list">
+  <ul>
+  <% Episodes.all_extending.each do |episode| %>
+    <li>
+      <a href="<%= episode.link %>">
+        extending emacs
+        <span>;; <%= episode.title %></span>
+      </a>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<div style="clear: both"></div>
+
+<div id="footer"></div>

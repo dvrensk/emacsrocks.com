@@ -1,11 +1,19 @@
 # -*- coding: utf-8 -*-
 
 module Episodes
-  def self.all
-    @all ||= find_all
+  def self.all_normal
+    @all_normal ||= find_all_normal
   end
 
-  def self.find_all
+  def self.all_extending
+    @all_extending ||= find_all_extending
+  end
+
+  def self.all
+    @all ||= (all_normal + all_extending).sort { |a, b| a.time <=> b.time }
+  end
+
+  def self.find_all_normal
     [
      Episode.new(:number => "01", :name => "From var to this",     :time => Time.utc(2011, "oct", 21), :size => "21mb", :youtube => "O0UgY-DmFbU", :commands => ["string-rectangle", "isearch-forward"]),
      Episode.new(:number => "02", :name => "A vimgolf eagle",      :time => Time.utc(2011, "oct", 21), :size => "30mb", :youtube => "dE2haYu0co8", :commands => ["kmacro-start-macro", "digit-argument"]),
@@ -20,8 +28,18 @@ module Episodes
     ]
   end
 
+  def self.find_all_extending
+    [
+     ExtendingEpisode.new(:number => "01", :time => Time.utc(2012, "jun", 17), :size => "97mb",  :youtube => "5axK-VUKJnk"),
+     ExtendingEpisode.new(:number => "02", :time => Time.utc(2012, "jun", 17), :size => "129mb", :youtube => "Zxt-c_N82_w")
+    ]
+  end
+
   def self.next(episode)
-    all[all.index(episode).next]
+    index = all_normal.index(episode)
+    return all_normal[index.next] if index
+    index = all_extending.index(episode)
+    return all_extending[index.next] if index
   end
 end
 
@@ -56,4 +74,22 @@ class Episode
     "emacs-rocks-#{@number}.mov"
   end
 
+end
+
+class ExtendingEpisode < Episode
+  def disqus_identifier
+    "extend-episode-#{@number}"
+  end
+
+  def link
+    "/extend/e#{@number}.html"
+  end
+
+  def filename
+    "extending-emacs-rocks-#{@number}.mov"
+  end
+
+  def title
+    "#{@number}"
+  end
 end

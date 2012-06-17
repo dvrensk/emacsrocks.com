@@ -1,0 +1,30 @@
+<div id="episode">
+  <h1>Extending Emacs Rocks! <span>Episode <%= @episode.number %>: <%= @episode.name %></span></h1>
+
+  <iframe width="560" height="345" src="http://www.youtube.com/embed/<%= @episode.youtube %>?hd=1" frameborder="0" allowfullscreen></iframe>
+
+  <div id="download">
+    <a href="<%= @episode.dropbox_link %>">Download this episode</a> (<%= @episode.size %>)
+    - Dropbox serves uncool headers, so right click and Save&nbsp;as&nbsp;...
+  </div>
+
+  <div id="github">
+    <a href="https://github.com/magnars/.emacs.d/">My .emacs.d on github</a>.
+  </div>
+</div>
+
+<div id="more">
+  <div id="next">
+    Want more?
+    <ul>
+      <% if @episode.next %>
+        <li><a href="<%= @episode.next.link %>">See episode <%= @episode.next.title %> of Extending Emacs Rocks</a></li>
+      <% end %>
+      <li><a href="/">Browse all episodes</a></li>
+      <li><a href="http://twitter.com/#!/emacsrocks">Follow me on twitter</a></li>
+    </ul>
+  </div>
+  <div id="comments">
+    <%= partial "disqus_thread" %>
+  </div>
+</div>
