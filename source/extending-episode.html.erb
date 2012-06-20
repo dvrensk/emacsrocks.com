@@ -8,8 +8,15 @@
     - Dropbox serves uncool headers, so right click and Save&nbsp;as&nbsp;...
   </div>
 
+  <div id="commits">
+    In this episode:
+    <% @episode.commits.each do |commit| %>
+      <p><a href="https://github.com/magnars/buster-mode/commit/<%= commit[:hash] %>"><%= commit[:hash] %></a><%= commit[:msg] %></p>
+    <% end %>
+  </div>
+
   <div id="github">
-    <a href="https://github.com/magnars/.emacs.d/">My .emacs.d on github</a>.
+    <a href="https://github.com/magnars/buster-mode/">The buster-mode project on github</a>.
   </div>
 </div>
 

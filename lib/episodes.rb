@@ -30,8 +30,9 @@ module Episodes
 
   def self.find_all_extending
     [
-     ExtendingEpisode.new(:number => "01", :time => Time.utc(2012, "jun", 17), :size => "97mb",  :youtube => "5axK-VUKJnk"),
-     ExtendingEpisode.new(:number => "02", :time => Time.utc(2012, "jun", 17), :size => "129mb", :youtube => "Zxt-c_N82_w")
+     ExtendingEpisode.new(:number => "01", :time => Time.utc(2012, "jun", 17), :size => "97mb",  :youtube => "5axK-VUKJnk", :commits => [{ :hash => "56e0b6e6", :msg => "Initial commit." }, { :hash => "e123fabe", :msg => "Tests up and running." }]),
+     ExtendingEpisode.new(:number => "02", :time => Time.utc(2012, "jun", 17), :size => "129mb", :youtube => "Zxt-c_N82_w", :commits => [{ :hash => "b4a79c4e", :msg => "Implemented toggle-deffered." }]),
+     ExtendingEpisode.new(:number => "03", :time => Time.utc(2012, "jun", 20), :size => "205mb", :youtube => "Dgcx5blog6s", :commits => [{ :hash => "f3fe2dd2", :msg => "Support hipster quotes." }, { :hash => "e83c3192", :msg => "Create a buster minor-mode." }])
     ]
   end
 
@@ -44,10 +45,16 @@ module Episodes
 end
 
 class Episode
-  attr_reader :number, :youtube, :size, :name, :commands, :time
+  attr_reader :number, :youtube, :size, :name, :commands, :commits, :time
 
   def initialize(params)
-    @number, @youtube, @size, @name, @commands, @time = params[:number], params[:youtube], params[:size], params[:name], params[:commands], params[:time]
+    @number = params[:number]
+    @youtube = params[:youtube]
+    @size = params[:size]
+    @name = params[:name]
+    @commands = params[:commands]
+    @commits = params[:commits]
+    @time = params[:time]
   end
 
   def next

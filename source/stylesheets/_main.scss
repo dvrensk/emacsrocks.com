@@ -21,6 +21,10 @@ a,
 #next {background: #000; padding: 20px; margin: 20px -20px; border-radius: 20px;}
 #next ul {list-style: disc; margin-left: 15px;}
 
+#commits {margin: 1em 0;}
+#commits a {font-family: monospace; font-size: 10px; margin-right: 10px;}
+#commits p {font-size: 16px; color: #777; margin-top: 5px;}
+
 #commands {font-size: 16px; margin-top: 2em;}
 #commands h3 {font-size: 18px; font-family: monaco, "consolas", "andale mono", "courier new";}
 #commands p {margin-bottom: 1em; color: #777;}

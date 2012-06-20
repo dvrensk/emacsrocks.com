@@ -33,6 +33,9 @@
       <a href="<%= episode.link %>">
         extending emacs
         <span>;; <%= episode.title %></span>
+        <% episode.commits.each do |commit| %>
+          <p><%= commit[:msg] %></p>
+        <% end %>
       </a>
     </li>
   <% end %>
