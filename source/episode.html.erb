@@ -4,8 +4,7 @@
   <iframe width="560" height="345" src="http://www.youtube.com/embed/<%= @episode.youtube %>?hd=1" frameborder="0" allowfullscreen></iframe>
 
   <div id="download">
-    <a href="<%= @episode.dropbox_link %>">Download this episode</a> (<%= @episode.size %>)
-    - Dropbox serves uncool headers, so right click and Save&nbsp;as&nbsp;...
+    <a href="<%= @episode.dropbox_link %>?dl=1">Download this episode</a> (<%= @episode.size %>)
   </div>
 
   <div id="commands">
