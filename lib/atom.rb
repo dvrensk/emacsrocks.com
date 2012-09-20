@@ -10,10 +10,10 @@ module Atom
     atom.instruct!
     atom.feed "xmlns" => "http://www.w3.org/2005/Atom" do |variable|
       atom.id "urn:emacsrocks-com:feed"
-      atom.updated Episodes.all[-1].time.iso8601(0)
+      atom.updated Episodes.all_normal[-1].time.iso8601(0)
       atom.title "Emacs Rocks!", :type => "text"
       atom.link :rel => "self", :href => "#{base_uri}/atom.xml"
-      Episodes.all[-10..-1].reverse.each do |episode|
+      Episodes.all_normal[-10..-1].reverse.each do |episode|
         atom.entry do
           atom.title "#{episode.number}: #{episode.name}"
           atom.updated episode.time.iso8601(0)
