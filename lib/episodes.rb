@@ -25,7 +25,8 @@ module Episodes
      Episode.new(:number => "08", :name => "mark-multiple",        :time => Time.utc(2011, "nov", 22), :size => "12mb", :youtube => "r2o9HYi7DOY", :commands => ["mark-next-like-this", "rename-sgml-tag", "inline-string-rectangle"]),
      Episode.new(:number => "09", :name => "expand-region",        :time => Time.utc(2012, "jan", 25), :size => "16mb", :youtube => "_RvHz3vJ3kA", :commands => ["expand-region"]),
      Episode.new(:number => "10", :name => "Jumping around",       :time => Time.utc(2012, "apr", 10), :size => "23mb", :youtube => "UZkpmegySnc", :commands => ["ace-jump-mode", "ido-imenu"]),
-     Episode.new(:number => "11", :name => "swank-js",             :time => Time.utc(2012, "jul", 04), :size => "42mb", :youtube => "qwtVtcQQfqc", :commands => ["slime-js-send-defun", "slime-js-jack-in-node"])
+     Episode.new(:number => "11", :name => "swank-js",             :time => Time.utc(2012, "jul", 04), :size => "42mb", :youtube => "qwtVtcQQfqc", :commands => ["slime-js-send-defun", "slime-js-jack-in-node"]),
+     Episode.new(:number => "12", :name => "Working with HTML",    :time => Time.utc(2012, "sep", 20), :size => "27mb", :youtube => "sBhQ2NIcrLQ", :commands => ["query-replace", "cleanup-buffer", "isearch-forward", "expand-region", "rename-sgml-tag", "sgml-delete-tag", "describe-key", "eval-last-sexp", "flush-lines", "sgml-close-tag", "repeat", "zencoding-expand-line"])
     ]
   end
 
