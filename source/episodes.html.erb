@@ -4,7 +4,7 @@
 
 <div class="episode_list">
   <ul>
-  <% Episodes.all_normal.each do |episode| %>
+  <% Episodes.all_normal.reverse.each do |episode| %>
     <li>
       <a href="<%= episode.link %>">
         @emacsrocks

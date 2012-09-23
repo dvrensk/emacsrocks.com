@@ -26,7 +26,8 @@ module Episodes
      Episode.new(:number => "09", :name => "expand-region",        :time => Time.utc(2012, "jan", 25), :size => "16mb", :youtube => "_RvHz3vJ3kA", :commands => ["expand-region"]),
      Episode.new(:number => "10", :name => "Jumping around",       :time => Time.utc(2012, "apr", 10), :size => "23mb", :youtube => "UZkpmegySnc", :commands => ["ace-jump-mode", "ido-imenu"]),
      Episode.new(:number => "11", :name => "swank-js",             :time => Time.utc(2012, "jul", 04), :size => "42mb", :youtube => "qwtVtcQQfqc", :commands => ["slime-js-send-defun", "slime-js-jack-in-node"]),
-     Episode.new(:number => "12", :name => "Working with HTML",    :time => Time.utc(2012, "sep", 20), :size => "27mb", :youtube => "sBhQ2NIcrLQ", :commands => ["query-replace", "cleanup-buffer", "isearch-forward", "expand-region", "rename-sgml-tag", "sgml-delete-tag", "describe-key", "eval-last-sexp", "flush-lines", "sgml-close-tag", "repeat", "zencoding-expand-line"])
+     Episode.new(:number => "12", :name => "Working with HTML",    :time => Time.utc(2012, "sep", 20), :size => "27mb", :youtube => "sBhQ2NIcrLQ", :commands => ["query-replace", "cleanup-buffer", "isearch-forward", "expand-region", "rename-sgml-tag", "sgml-delete-tag", "describe-key", "eval-last-sexp", "flush-lines", "sgml-close-tag", "repeat", "zencoding-expand-line"]),
+     Episode.new(:number => "13", :name => "multiple-cursors",     :time => Time.utc(2012, "sep", 24), :size => "35mb", :youtube => "jNa3axo40qM", :commands => ["mc-mark-next-like-this", "yank-rectangle", "set-rectangular-region-anchor", "dired-toggle-read-only", "mc-mark-all-like-this", "eval-and-replace", "kmacro-name-last-macro", "insert-kbd-macro"])
     ]
   end
 
