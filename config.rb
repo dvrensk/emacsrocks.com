@@ -14,6 +14,12 @@ end
 
 page "/", :proxy => "/episodes.html", :ignore => true
 
+require "./lib/podcast"
+
+page "/podcast.xml", :proxy => "/podcast.xml", :layout => "none" do
+  @feed = Podcast.build
+end
+
 require "./lib/atom"
 
 page "/atom.xml", :proxy => "/atom.xml", :layout => "none" do
